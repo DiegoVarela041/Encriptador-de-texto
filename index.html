@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <img class="logo" src="./assets/Logo.png" alt="Logo de la aplicación">
+    </header>
+    <main>
+        <div class="container">
+            <fieldset>
+                <legend>Ingrese el texto a encriptar o desencriptar</legend>
+                <label for="texto">
+                    <textarea id="texto" placeholder="Ingrese el texto aquí" aria-label="Área de texto para encriptar o desencriptar"></textarea>
+                </label>
+                <div class="mensaje_ads">
+                    <span class="signo_exclamacion">!</span>
+                    <div class="tooltip">
+                        <ol>
+                            <li>No se aceptan Mayúsculas (BLOQ. Mayús.)</li>
+                            <li>Sin acentos ni caracteres especiales. (✼,↣,€,-,+,~,etc.)</li>
+                        </ol>
+                    </div>
+                    <p class="texto_mensaje_ads">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="buttons">
+                    <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </fieldset>
+
+            <div class="result">
+                <textarea id="resultado" placeholder="Texto encriptado/desencriptado" readonly></textarea>
+                <img id="img" class="muñeco" src="./assets/Group 8.png" alt="Muñeco ilustrativo">
+                <button id="nuevo-boton" class="boton-azul" onclick="copiarTexto()">copiar</button>
+                <h2 id="mensaje-vacio">Ningún mensaje fue encontrado</h2>
+                <p id="instruccion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="copiar" class="copiar">Copiar</button>
+            </div>            
+        </div>
+    </main>
+    <footer class="pie">
+        © 2024 Desarrollado por Diego Varela Jiménez
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
